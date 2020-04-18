@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Define VARs
+#
+source ${APPhome}scripts/ENVIR.sh
+
+rpm -qa | sort > ${APPhome}tallies/RPM_List
+

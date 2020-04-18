@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Define VARs
+#
+source ${APPhome}scripts/ENVIR.sh
+
+# Search all mounted local filesystems _ONLY_ and skip the paths of (/home, /proc, /sys, /run)
+find / -xautofs  -type f -not -path "/home/*" -not -path "/proc/*" -not -path "/sys/*" -not -path "/run/*" -not -path "/var/log/*"  \
+-exec sha512sum {} \; | sort -k2 > ${APPhome}tallies/SHA512sums
+
+

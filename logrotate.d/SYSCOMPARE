@@ -1,0 +1,17 @@
+/opt/SYSCOMPARE/tallies/FILES_List
+/opt/SYSCOMPARE/tallies/RPM_List
+/opt/SYSCOMPARE/tallies/SHA512sums
+/opt/SYSCOMPARE/tallies/AU.conf
+/opt/SYSCOMPARE/tallies/AU.rules
+{
+    daily
+    missingok
+    sharedscripts
+    rotate 15
+    dateext
+    delaycompress
+    compress
+    compresscmd /bin/xz
+    compressext .xz
+    compressoptions -z9 
+}

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Define VARs
+#
+source ${APPhome}scripts/ENVIR.sh
+
+rpm -Va | sort > ${APPhome}tallies/FILES_List
+

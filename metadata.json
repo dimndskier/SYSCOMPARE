@@ -1,0 +1,11 @@
+{
+  "name": "wfrench-SYSCOMPARE",
+  "version": "0.1.2",
+  "author": "wfrench",
+  "summary": "To enable comparisons of systems over several days, or even on different networks.", 
+  "license": "Apache 2.0",
+  "source": "https://github.com/dimndskier/SYSCOMPARE.git",
+  "project_page": "https://github.com/dimndskier/SYSCOMPARE",
+  "issues_url": "https://github.com/dimndskier/SYSCOMPARE/issues",
+}
+
