@@ -1,8 +1,0 @@
-#!/bin/bash
-
-# Define VARs
-#
-source ${APPhome}scripts/ENVIR.sh
-
-# Capture AUDITD.conf details
-egrep -v "^#|^$" /etc/aide.conf | sort > ${APPhome}tallies/AIDE.conf
