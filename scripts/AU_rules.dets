@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Define VARs
+#
+source ${APPhome}scripts/ENVIR.sh
+
+# Capture AUDITD.conf details
+cat /etc/audit/audit.rules | sort  > ${APPhome}tallies/AU.rules
+

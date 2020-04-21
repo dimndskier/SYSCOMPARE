@@ -8,5 +8,8 @@ yDATE=$(( ${tDATE} - 1 ))
 APPhome="/opt/SYSCOMPARE/"
 # HOUR of the current time
 
+if [ ! -d "${APPhome}/tallies" ]; then
+  mkdir -p "${APPhome}/tallies" && echo "The tallies directory was non-existent, but successfully created."
+fi
 
 export tDATE yDATE APPhome

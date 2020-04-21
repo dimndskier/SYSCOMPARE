@@ -43,29 +43,66 @@ if [ ! -f "${APPhome}tallies/SHA512sums-${yDATE}" ]; then
   echo -e "There is no prior SHA512sums for comparison; therefore no possible comparison.\nExiting..."
 fi
 
-if [ ! -f "${APPhome}tallies/AU.conf" ]; then
-  ${APPhome}scripts/AU.conf.dets &
+if [ ! -f "${APPhome}tallies/AU_conf" ]; then
+  ${APPhome}scripts/AU_conf.dets &
 fi
 
-if [ ! -f "${APPhome}tallies/AU.conf-${yDATE}" ]; then
-  echo -e "There is no prior AU.conf for comparison; therefore no possible comparison.\nExiting..."
+if [ ! -f "${APPhome}tallies/AU_conf-${yDATE}" ]; then
+  echo -e "There is no prior AU_conf for comparison; therefore no possible comparison.\nExiting..."
 fi
 
-if [ ! -f "${APPhome}tallies/AU.rules" ]; then
-  ${APPhome}scripts/AU.rules.dets &
+if [ ! -f "${APPhome}tallies/AU_rules" ]; then
+  ${APPhome}scripts/AU_rules.dets &
 fi
 
-if [ ! -f "${APPhome}tallies/AU.rules-${yDATE}" ]; then
-  echo -e "There is no prior AU.rules for comparison; therefore no possible comparison.\nExiting..."
+if [ ! -f "${APPhome}tallies/AU_rules-${yDATE}" ]; then
+  echo -e "There is no prior AU_rules for comparison; therefore no possible comparison.\nExiting..."
 fi
 
-if [ ! -f "${APPhome}tallies/AIDE.conf" ]; then
-  ${APPhome}scripts/AIDE.conf.dets &
+if [ ! -f "${APPhome}tallies/AIDE_conf" ]; then
+  ${APPhome}scripts/AIDE_conf.dets &
 fi
 
-if [ ! -f "${APPhome}tallies/AIDE.conf-${yDATE}" ]; then
-  echo -e "There is no prior AIDE.conf for comparison; therefore no possible comparison.\nExiting...\n"
+if [ ! -f "${APPhome}tallies/AIDE_conf-${yDATE}" ]; then
+  echo -e "There is no prior AIDE_conf for comparison; therefore no possible comparison.\nExiting...\n"
 fi
+
+if [ ! -f "${APPhome}tallies/IDENT.pass" ]; then
+  ${APPhome}scripts/IDENT.dets &
+fi
+
+if [ ! -f "${APPhome}tallies/IDENT.pass-${yDATE}" ]; then
+  echo -e "There is no prior IDENT.pass for comparison; therefore no possible comparison.\nExiting...\n"
+fi
+
+if [ ! -f "${APPhome}tallies/IDENT.shadow" ]; then
+  ${APPhome}scripts/IDENT.dets &
+fi
+
+if [ ! -f "${APPhome}tallies/IDENT.shadow-${yDATE}" ]; then
+  echo -e "There is no prior IDENT.shadow for comparison; therefore no possible comparison.\nExiting...\n"
+fi
+
+if [ ! -f "${APPhome}tallies/IDENT.group" ]; then
+  ${APPhome}scripts/IDENT.dets &
+fi
+
+if [ ! -f "${APPhome}tallies/IDENT.group-${yDATE}" ]; then
+  echo -e "There is no prior IDENT.group for comparison; therefore no possible comparison.\nExiting...\n"
+fi
+
+if [ ! -f "${APPhome}tallies/SWAP" ]; then
+  ${APPhome}scripts/SWAP.dets &
+fi
+
+if [ ! -f "${APPhome}tallies/SWAP-${yDATE}" ]; then
+  echo -e "There is no prior SWAP for comparison; therefore no possible comparison.\nExiting...\n"
+fi
+
+
+
+
+
 
 sh ${APPhome}scripts/stat.sh &
 

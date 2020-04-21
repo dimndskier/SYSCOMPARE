@@ -76,6 +76,11 @@ and do your best not to change too much else.
 mm/dd/yyyy -__Rev-Maj.Min__        -Author;
 	> <description of changes>
 
+04/20/2020      -__SYSCOMPARE-0.1.3__	`Issues={}`      -WFrench;
+
+	> Update the AIDE.dets to check for the aide.conf file, and if not there indicate as such.
+	> Added IDENT.dets to grab details about /etc/{passwd,shadow,group}.
+
 04/18/2020      -__SYSCOMPARE-0.1.2__	`Issues={}`      -WFrench;
 
 	> Set the ownership of all files to root:root for proper execution.

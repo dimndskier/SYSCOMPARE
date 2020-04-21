@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Define VARs
+#
+source ${APPhome}scripts/ENVIR.sh
+
+# Capture details about swap on the server
+free -m > ${APPhome}tallies/SWAP

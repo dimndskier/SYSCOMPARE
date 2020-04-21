@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Define VARs
+#
+source ${APPhome}scripts/ENVIR.sh
+
+# Grab passwd copy
+cat /etc/passwd > ${APPhome}tallies/IDENT.pass
+
+# Grab shadow copy
+cat /etc/shadow > ${APPhome}tallies/IDENT.shadow
+
+# Grab group copy
+cat /etc/group > ${APPhome}tallies/IDENT.group
