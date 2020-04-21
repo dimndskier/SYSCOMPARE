@@ -1,0 +1,16 @@
+#!/bin/bash -x
+
+# Define VARs
+#
+source ${APPhome}scripts/ENVIR.sh
+
+VER=`rpm -q centos-release --qf "%{VERSION}\n"`
+
+# Capture a list of the services (Systemd or sysv|xinetd), and their config-status with respect to enabled|disabled.
+if [ "${VER%.}" == "7" ]; then
+  echo -e "\n\nSysv/Xinetd Services:" > ${APPhome}tallies/SVCS
+  chkconfig --list >> ${APPhome}tallies/SVCS
+else
+  echo -e "Systemd Services:" > ${APPhome}tallies/SVCS
+  systemctl list-unit-files --no-pager >> ${APPhome}tallies/SVCS
+fi

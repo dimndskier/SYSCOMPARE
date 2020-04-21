@@ -26,14 +26,14 @@ This project is written entirely in BASH scripting.  The primary script, GEN_tal
 The .dets scripts are aptly named after what they are collecting, such as:
 * List of RPMs (rpm -qa)	_Already Addressed_
 * Changes to files delivered by RPM installation (rpm -Va) _Already Addressed_
-* SWAP Configurations (free -m)
+* SWAP Configurations (free -m)		_Already Addressed_
 * Service Statuses:
 	* systemd services
 	* xinetd/sysv services
 * File Systems Mounted and with what options
-* /etc/passwd File
-* /etc/shadow File
-* /etc/group File
+* /etc/passwd File		_Already Addressed_
+* /etc/shadow File		_Already Addressed_
+* /etc/group File		_Already Addressed_
 * McAfee versions:
 	* Engine version
 	* DAT version
@@ -75,6 +75,10 @@ and do your best not to change too much else.
 
 mm/dd/yyyy -__Rev-Maj.Min__        -Author;
 	> <description of changes>
+
+04/21/2020      -__SYSCOMPARE-0.1.4__	`Issues={}`      -WFrench;
+
+	> Added SVCS to check for services and their enabled/disabled state.
 
 04/20/2020      -__SYSCOMPARE-0.1.3__	`Issues={}`      -WFrench;
 

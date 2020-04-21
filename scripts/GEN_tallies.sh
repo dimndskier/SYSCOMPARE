@@ -99,6 +99,13 @@ if [ ! -f "${APPhome}tallies/SWAP-${yDATE}" ]; then
   echo -e "There is no prior SWAP for comparison; therefore no possible comparison.\nExiting...\n"
 fi
 
+if [ ! -f "${APPhome}tallies/SVCS" ]; then
+  ${APPhome}scripts/SVCS.dets &
+fi
+
+if [ ! -f "${APPhome}tallies/SVCS-${yDATE}" ]; then
+  echo -e "There is no prior SVCS for comparison; therefore no possible comparison.\nExiting...\n"
+fi
 
 
 
