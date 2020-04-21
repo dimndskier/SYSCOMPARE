@@ -7,6 +7,7 @@
 /opt/SYSCOMPARE/tallies/IDENT.shadow
 /opt/SYSCOMPARE/tallies/RPM_List
 /opt/SYSCOMPARE/tallies/SHA512sums
+/opt/SYSCOMPARE/tallies/SVCS
 /opt/SYSCOMPARE/tallies/SWAP
 {
     daily
