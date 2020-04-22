@@ -1,14 +1,17 @@
 #!/bin/bash
 
+# ScriptName: AIDE_conf.dets
+
 # Define VARs
 #
 source ${APPhome}scripts/ENVIR.sh
 
-# Capture AUDITD.conf details
-
+# Capture aide.conf details
+echo "Results about aide.conf: " > ${APPhome}tallies/AIDE_conf
+echo "=========================================================" >> ${APPhome}tallies/AIDE_conf
 if [ -f /etc/aide.conf ]; then
-  egrep -v "^#|^$" /etc/aide.conf | sort > ${APPhome}tallies/AIDE_conf
+  egrep -v "^#|^$" /etc/aide.conf | sort >> ${APPhome}tallies/AIDE_conf
 else
   echo "The AIDE package is either not install, or the conf file is non-existent." \
-   > ${APPhome}tallies/AIDE_conf
+   >> ${APPhome}tallies/AIDE_conf
 fi

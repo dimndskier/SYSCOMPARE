@@ -1,8 +1,13 @@
 #!/bin/bash
 
+# ScriptName: RPMq.dets
+
 # Define VARs
 #
 source ${APPhome}scripts/ENVIR.sh
 
-rpm -qa | sort > ${APPhome}tallies/RPM_List
+
+echo "Results about List of RPMs installed: " > ${APPhome}tallies/RPM_List
+echo "=========================================================" >> ${APPhome}tallies/RPM_List
+rpm -qa | sort >> ${APPhome}tallies/RPM_List
 

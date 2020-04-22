@@ -1,9 +1,14 @@
 #!/bin/bash
 
+# ScriptName: AU_conf.dets
+
 # Define VARs
 #
 source ${APPhome}scripts/ENVIR.sh
 
+echo "Results about auditd.conf: " > ${APPhome}tallies/AU.conf
+echo "=========================================================" >> ${APPhome}tallies/AU.conf
+
 # Capture AUDITD.conf details
-cat /etc/audit/auditd.conf > ${APPhome}tallies/AU.conf
+cat /etc/audit/auditd.conf >> ${APPhome}tallies/AU.conf
 

@@ -28,7 +28,6 @@ fi
 # Generate a generic list of files modified from their original packages
 if [ ! -f "${APPhome}tallies/FILES_List" ]; then
   sh ${APPhome}scripts/RPMv.dets &
-  echo -e "\n\nTo interpret the results above, execute:\n\tman -S 8 rpm\n\tSkip to the VERIFY OPTIONS section." >> ${APPhome}tallies/FILES_List
 fi
 
 if [ ! -f "${APPhome}tallies/FILES_List-${yDATE}" ]; then
@@ -43,20 +42,20 @@ if [ ! -f "${APPhome}tallies/SHA512sums-${yDATE}" ]; then
   echo -e "There is no prior SHA512sums for comparison; therefore no possible comparison.\nExiting..."
 fi
 
-if [ ! -f "${APPhome}tallies/AU_conf" ]; then
+if [ ! -f "${APPhome}tallies/AU.conf" ]; then
   ${APPhome}scripts/AU_conf.dets &
 fi
 
-if [ ! -f "${APPhome}tallies/AU_conf-${yDATE}" ]; then
-  echo -e "There is no prior AU_conf for comparison; therefore no possible comparison.\nExiting..."
+if [ ! -f "${APPhome}tallies/AU.conf-${yDATE}" ]; then
+  echo -e "There is no prior AU.conf for comparison; therefore no possible comparison.\nExiting..."
 fi
 
-if [ ! -f "${APPhome}tallies/AU_rules" ]; then
+if [ ! -f "${APPhome}tallies/AU.rules" ]; then
   ${APPhome}scripts/AU_rules.dets &
 fi
 
-if [ ! -f "${APPhome}tallies/AU_rules-${yDATE}" ]; then
-  echo -e "There is no prior AU_rules for comparison; therefore no possible comparison.\nExiting..."
+if [ ! -f "${APPhome}tallies/AU.rules-${yDATE}" ]; then
+  echo -e "There is no prior AU.rules for comparison; therefore no possible comparison.\nExiting..."
 fi
 
 if [ ! -f "${APPhome}tallies/AIDE_conf" ]; then

@@ -1,14 +1,24 @@
 #!/bin/bash
 
+# ScriptName: IDENT.dets
+
 # Define VARs
 #
 source ${APPhome}scripts/ENVIR.sh
 
+
+
 # Grab passwd copy
-cat /etc/passwd > ${APPhome}tallies/IDENT.pass
+echo "Results about /etc/passwd: " > ${APPhome}tallies/IDENT.pass
+echo "=========================================================" >> ${APPhome}tallies/IDENT.pass
+cat /etc/passwd >> ${APPhome}tallies/IDENT.pass
 
 # Grab shadow copy
-cat /etc/shadow > ${APPhome}tallies/IDENT.shadow
+echo "Results about /etc/shadow: " > ${APPhome}tallies/IDENT.shadow
+echo "=========================================================" >> ${APPhome}tallies/IDENT.shadow
+cat /etc/shadow >> ${APPhome}tallies/IDENT.shadow
 
 # Grab group copy
-cat /etc/group > ${APPhome}tallies/IDENT.group
+echo "Results about /etc/group: " > ${APPhome}tallies/IDENT.group
+echo "=========================================================" >> ${APPhome}tallies/IDENT.group
+cat /etc/group >> ${APPhome}tallies/IDENT.group

@@ -1,8 +1,13 @@
 #!/bin/bash
 
+# ScriptName: RPMv.dets
+
 # Define VARs
 #
 source ${APPhome}scripts/ENVIR.sh
 
-rpm -Va | sort > ${APPhome}tallies/FILES_List
-
+echo "Results about Differences between RPM-installed Files and Current states: " > \
+ ${APPhome}tallies/FILES_List
+echo "=========================================================" >> ${APPhome}tallies/FILES_List
+rpm -Va | sort >> ${APPhome}tallies/FILES_List
+echo -e "\n\nTo interpret the results above, execute:\n\tman -S 8 rpm\n\tSkip to the VERIFY OPTIONS section." >> ${APPhome}tallies/FILES_List

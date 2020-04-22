@@ -1,8 +1,12 @@
 #!/bin/bash
 
+# ScriptName: SWAP.dets
+
 # Define VARs
 #
 source ${APPhome}scripts/ENVIR.sh
 
+echo "Results about auditd.conf: " > ${APPhome}tallies/SWAP
+echo "=========================================================" >> ${APPhome}tallies/SWAP
 # Capture details about swap on the server
-free -m > ${APPhome}tallies/SWAP
+free -m >> ${APPhome}tallies/SWAP

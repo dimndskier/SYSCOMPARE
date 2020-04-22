@@ -27,9 +27,9 @@ The .dets scripts are aptly named after what they are collecting, such as:
 * List of RPMs (rpm -qa)	_Already Addressed_
 * Changes to files delivered by RPM installation (rpm -Va) _Already Addressed_
 * SWAP Configurations (free -m)		_Already Addressed_
-* Service Statuses:
-	* systemd services
-	* xinetd/sysv services
+* Service Statuses:			_Already Addressed_
+	* systemd services		_Already Addressed_
+	* xinetd/sysv services		_Already Addressed_
 * File Systems Mounted and with what options
 * /etc/passwd File		_Already Addressed_
 * /etc/shadow File		_Already Addressed_
@@ -75,6 +75,17 @@ and do your best not to change too much else.
 
 mm/dd/yyyy -__Rev-Maj.Min__        -Author;
 	> <description of changes>
+
+
+04/21/2020      -__SYSCOMPARE-0.1.6__	`Issues={}`      -WFrench;
+
+	> Added more changes to refine the suite.
+
+
+04/21/2020      -__SYSCOMPARE-0.1.5__	`Issues={}`      -WFrench;
+
+	> Added SWAP to check for swap configurations.  Updated all scripts to provide a header-line to all tally files.
+
 
 04/21/2020      -__SYSCOMPARE-0.1.4__	`Issues={}`      -WFrench;
 

@@ -1,6 +1,6 @@
 {
   "name": "wfrench-SYSCOMPARE",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "author": "wfrench",
   "summary": "To enable comparisons of systems over several days, or even on different networks.", 
   "license": "Apache 2.0",

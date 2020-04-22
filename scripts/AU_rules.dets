@@ -1,9 +1,13 @@
 #!/bin/bash
 
+# ScriptName: AU_rules.dets
+
 # Define VARs
 #
 source ${APPhome}scripts/ENVIR.sh
 
+echo "Results about audit.rules: " > ${APPhome}tallies/AU.rules
+echo "=========================================================" >> ${APPhome}tallies/AU.rules
 # Capture AUDITD.conf details
 cat /etc/audit/audit.rules | sort  > ${APPhome}tallies/AU.rules
 
